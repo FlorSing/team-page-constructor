@@ -73,4 +73,3 @@ const questions = [
   inquirer.prompt(questions).then((answers) => {
     fs.writeFile(`${answers.name.toLowerCase().split(' ').join('')}.json`, JSON.stringify(answers, null, '  '), (err) => err ? console.error(err) : console.log('... file created'));
   });
-
