@@ -71,6 +71,6 @@ const questions = [
 ];
 
 inquirer.prompt(questions)
-            .then((answers) => writeFileAsync('team.html', render(answers)))
+            .then((answers) => fs.writeFile('team.html', render(answers)))
             .then(() => console.log('Successfully wrote to team.html'))
             .catch((err) => console.error(err));

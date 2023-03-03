@@ -1,0 +1,7 @@
+every time you add an employee in the command line you need to create a new object with it using the correct class
+8:26
+and then add it into an array
+8:26
+once you are done adding employees you can pass that array of objects into the render function and it will return all the proper html
+8:26
+then you just to write it to a file
