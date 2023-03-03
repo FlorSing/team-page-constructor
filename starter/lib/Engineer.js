@@ -4,19 +4,20 @@ const Employee = require('./Employee');
 
 class Engineer extends Employee {
 
-    constructor(id, githubId){
-
-        super(1, 'fps', 'fps@test.com');
-    
-        this.githubId = githubId;
+    constructor(name, id, email, github){
+        super(name, id, email);
+        this.github = github;
         this.role = 'Engineer';
+        
+    
+        
    
     };
     getRole(){
-        console.log(this.role);
+        return this.role;
     }
     getGithub(){
-        console.log(this.githubId);
+        return this.github;
     }
         
 }

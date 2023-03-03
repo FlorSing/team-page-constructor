@@ -3,15 +3,15 @@ class Employee {
 
   constructor(name, id, email) {
     
-    if (!name) {
-      throw new Error("Please provide name.");
-    };
-    if (!id) {
-      throw new Error("Please provide ID.");
-    };
-    if (!email) {
-      throw new Error("Please provide email.");
-    };
+    // if (!name) {
+    //   throw new Error("Please provide name.");
+    // };
+    // if (!id) {
+    //   throw new Error("Please provide ID.");
+    // };
+    // if (!email) {
+    //   throw new Error("Please provide email.");
+    // };
 
     this.name = name;
     this.id = id;
@@ -20,16 +20,16 @@ class Employee {
   }
 
     getName(){
-        console.log(this.name);
+        return this.name;
     };
     getId(){
-      console.log(this.id);
+      return this.id;
     };
     getEmail() {
-      console.log(this.email);
+      return this.email;
     };
     getRole(){
-      console.log(this.role);
+      return this.role;
     };
   };
 
