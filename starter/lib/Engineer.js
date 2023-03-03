@@ -22,10 +22,3 @@ class Engineer extends Employee {
 }
 
 module.exports = Engineer;
-
-const e = new Engineer(1, 'fpsGit');
-
-e.getRole();
-console.log(e.githubId);
-e.getGithub();
-

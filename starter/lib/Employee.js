@@ -34,17 +34,3 @@ class Employee {
   };
 
 module.exports = Employee;
-
-const e = new Employee('flor s','fps@fps',25);
-
-console.log(typeof(e));
-console.log(e.name);
-console.log(e.id);
-console.log(e.email);
-
-e.getEmail();
-e.getId();
-e.getName();
-e.getRole();
-
-

@@ -22,10 +22,3 @@ class Manager extends Employee {
 }
 
 module.exports = Manager;
-
-const e = new Manager(1, 500);
-
-e.getRole();
-console.log(e.officeNumber);
-e.getOfficeNumber();
-

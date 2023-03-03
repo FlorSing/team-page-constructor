@@ -1,0 +1,9 @@
+{
+  "name": "fps",
+  "empID": "123",
+  "empEmail": "jfkdl;a",
+  "manager": true,
+  "officeno": "456",
+  "engineer": false,
+  "intern": false
+}

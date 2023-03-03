@@ -22,12 +22,3 @@ class Intern extends Employee {
 }
 
 module.exports = Intern;
-
-
-
-const e = new Intern(1, 'Oxford');
-
-e.getRole();
-console.log(e.school);
-e.getSchool();
-
