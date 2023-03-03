@@ -33,6 +33,7 @@ class Employee {
     };
   };
 
+module.exports = Employee;
 
 const e = new Employee('flor s','fps@fps',25);
 
@@ -45,3 +46,5 @@ e.getEmail();
 e.getId();
 e.getName();
 e.getRole();
+
+
