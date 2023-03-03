@@ -1,0 +1,9 @@
+{
+  "name": "mar ta",
+  "empID": "789",
+  "empEmail": "mar@ta",
+  "manager": false,
+  "engineer": true,
+  "githubID": "marta",
+  "intern": false
+}

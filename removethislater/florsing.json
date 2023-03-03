@@ -1,0 +1,9 @@
+{
+  "name": "flor sing",
+  "empID": "891",
+  "empEmail": "flor@fps",
+  "manager": true,
+  "officeno": "800",
+  "engineer": false,
+  "intern": false
+}

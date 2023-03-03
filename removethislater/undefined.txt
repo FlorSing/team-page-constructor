@@ -1,0 +1,9 @@
+{
+  "empName": "soph",
+  "empID": "800",
+  "empEmail": "soph@soph",
+  "manager": false,
+  "engineer": false,
+  "intern": true,
+  "school": "oxf"
+}
