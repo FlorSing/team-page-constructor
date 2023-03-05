@@ -1,14 +1,14 @@
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+// const Manager = require("./lib/Manager");
+// const Engineer = require("./lib/Engineer");
+// const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
-const path = require("path");
+// const path = require("path");
 const fs = require("fs");
 
-const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+// const OUTPUT_DIR = path.resolve(__dirname, "output");
+// const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const render = require("./src/page-template.js");
+// const render = require("./src/page-template.js");
 
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
@@ -70,8 +70,7 @@ const questions = [
         },
 ];
 
-inquirer.prompt(questions)
-            // .then((answers) => fs.writeFile('team.html', render(answers)))
-            .then((answers) => console.log(JSON.stringify(answers, null, '  ')))
-            .then(() => console.log('Successfully wrote to team.html'))
-            .catch((err) => console.error(err));
+  inquirer.prompt(questions).then((answers) => {
+    fs.writeFile(`${answers.name.toLowerCase().split(' ').join('')}.json`, JSON.stringify(answers, null, '  '), (err) => err ? console.error(err) : console.log('... file created'));
+  });
+
