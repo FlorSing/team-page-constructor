@@ -104,14 +104,17 @@ function buildStart() {
 function buildQuestions() {
     inquirer.prompt(builder).then((answers) => {
     buildTeam();
+    return answers;
     })
 }
 
 function buildTeam() {
     if (add === 'Finish building team'){
-        inquirer.prompt().then((answers) => {
-          console.log(answers);
-    })  }
+      console.log(JSON.stringify(answers, null, '  '))
+        // inquirer.prompt().then((answers) => {
+          // (answers) => fs.writeFile(outputPath, render(answers))
+    // })  
+  }
     if (add === 'Add an Engineer') {
          inquirer.prompt(engineer).then((answers) => {
          buildQuestions();
@@ -186,10 +189,10 @@ buildStart();
 
 // const engr = new Engineer(`${answer.name}`, `${answer.empID}`, `${answers.empEmail}`, `${answers.github}`)
 
-inquirer.prompt(questions)
-            .then((answers) => fs.writeFile(outputPath, render(answers)))
-            .then((answers) => console.log(JSON.stringify(answers, null, '  ')))
-            .then(() => console.log('Successfully wrote to team.html'))
-            .catch((err) => console.error(err));
+// inquirer.prompt(questions)
+//             .then((answers) => fs.writeFile(outputPath, render(answers)))
+//             .then((answers) => console.log(JSON.stringify(answers, null, '  ')))
+//             .then(() => console.log('Successfully wrote to team.html'))
+//             .catch((err) => console.error(err));
 
           

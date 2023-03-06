@@ -83,9 +83,13 @@ const intern = [
       ];
 
 function buildStart() {
-    inquirer.prompt(manager).then((answers) =>{
+    inquirer.prompt(manager).then((answers) =>
+    
+    {
+      console.log(answers);
     buildQuestions();
-    })    
+    }
+    )    
 }      
 
 function buildQuestions() {
