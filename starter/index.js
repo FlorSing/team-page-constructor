@@ -95,9 +95,15 @@ const intern = [
         
       ];
 
+const html = [];
+
 function buildStart() {
     inquirer.prompt(manager).then((answers) =>{
-    buildQuestions();
+      render(new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.officeNumber));
+      // html.push(e);
+      // console.log(html);
+      // fs.writeFile(__dirname, "output", `${answer.managerName}.json`,JSON.stringify(answers, null, '  ') )
+      buildQuestions();
     })    
 }      
 
@@ -111,81 +117,27 @@ function buildQuestions() {
 function buildTeam() {
     if (add === 'Finish building team'){
       console.log(JSON.stringify(answers, null, '  '))
-        // inquirer.prompt().then((answers) => {
-          // (answers) => fs.writeFile(outputPath, render(answers))
-    // })  
   }
     if (add === 'Add an Engineer') {
          inquirer.prompt(engineer).then((answers) => {
+          render(new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.github));
+          // html.push(e);
+          // console.log(html);
          buildQuestions();
          })
     }
     if (add === 'Add an Intern') {
      inquirer.prompt(intern).then((answers) => {
+          render(new Intern(answers.internName, answers.internID, answers.internEmail, answers.school));
+          // html.push(e);
+          // console.log(html);
          buildQuestions();
      })
     }
   }
 
-
+// console.log[html];
 buildStart();
-
-// const questions = [
-//     {
-//     type: 'input',
-//     name: 'name',
-//     message: 'Employee name:'
-//     },
-//     {
-//     type: 'input',
-//     name: 'empID',
-//     message: 'Employee ID: '
-//     },
-//     {
-//     type: 'input',
-//     name: 'empEmail',
-//     message: 'Employee email: '
-//     },
-//     {
-//         type: 'confirm',
-//         name: 'manager',
-//         message: 'manager?'
-//       },
-//       {
-//         type: 'input',
-//         name: 'officeno',
-//         message: 'office no?',
-//         when(answers) {
-//           return answers.manager;
-//         },
-//       },
-//       {
-//         type: 'confirm',
-//         name: 'engineer',
-//         message: 'engineer?',
-//       },
-//       {
-//         type: 'input',
-//         name: 'githubID',
-//         message: 'githubID?',
-//         when(answers) {
-//           return answers.engineer;
-//         },
-//       },
-//       {
-//         type: 'confirm',
-//         name: 'intern',
-//         message: 'intern?',
-//         },
-//         {
-//         type: 'input',
-//         name: 'school',
-//         message: 'school?',
-//         when(answers) {
-//           return answers.intern;
-//           },
-//         },
-// ];
 
 // const engr = new Engineer(`${answer.name}`, `${answer.empID}`, `${answers.empEmail}`, `${answers.github}`)
 

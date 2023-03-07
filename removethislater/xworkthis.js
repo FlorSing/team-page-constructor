@@ -1,3 +1,4 @@
+const fs = require("fs");
 const inquirer = require("inquirer");
 
 const manager = [
@@ -82,11 +83,16 @@ const intern = [
         
       ];
 
+    
+
+const html = [];
+const e = new Manager();
 function buildStart() {
     inquirer.prompt(manager).then((answers) =>
     
     {
-      console.log(answers);
+      // HTML.push[e.]
+      // fs.writeFile(`'../output/${answers.managerName}.json'`,JSON.stringify(answers, null, '  ') );
     buildQuestions();
     }
     )    
@@ -105,15 +111,21 @@ function buildTeam() {
     })  }
     if (add === 'Add an Engineer') {
          inquirer.prompt(engineer).then((answers) => {
+          console.log(answers);
          buildQuestions();
          })
     }
     if (add === 'Add an Intern') {
      inquirer.prompt(intern).then((answers) => {
+      console.log(answers);
          buildQuestions();
      })
     }
   }
 
 
+  employee => employee.getRole() === "Manager"
+  manager => generateManager(manager)
+
 buildStart();
+
