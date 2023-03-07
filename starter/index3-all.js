@@ -103,45 +103,41 @@ function buildStart() {
       const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.officeNumber);
       buildQuestions();
       html.push(manager);
-    })    
+    })
+         
 }      
 
 function buildQuestions() {
     inquirer.prompt(builder).then((answers) => {
-    buildTeam();
-    return answers;
+      buildTeam();
+      // return answers;
     })
+    
 }
 
 function buildTeam() {
     if (add === 'Add an Engineer') {
-         inquirer.prompt(engineer).then((answers) => {
-           const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.githubID);
-         buildQuestions();
+        inquirer.prompt(engineer).then((answers) => {
+        const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.githubID);
+        buildQuestions();
         html.push(engineer);
+        console.log(engineer.getRole());
+
          })
     }
 
     if (add === 'Add an Intern') {
-     inquirer.prompt(intern).then((answers) => {
-          const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.school);
-         buildQuestions();
-         html.push(intern);
-     })
+        inquirer.prompt(intern).then((answers) => {
+        const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.school);
+        buildQuestions();
+        html.push(intern);
+        })
     }
 
     if (add === 'Finish building team'){
-
+        fs.writeFile(outputPath, render(html), (err) => err? console.error(err) : console.log('..created team.html file'));
       };
-       buildPage();
   }
-
-
-function buildPage() {
-
-    fs.writeFile(outputPath, render(html), (err) => err? console.error(err) : console.log('..created team.html file'));
-};
-
 
 buildStart();
 
