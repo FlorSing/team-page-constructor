@@ -12,9 +12,13 @@ The app will be invoked using node index.js, and npm needs to be installed.
 
 The page view is sampled below:
 
+
 Code can be found in the GitHub repository:
 
-A screen recording of the CLI data capture is below:
+https://github.com/FlorSing/team-page-constructor
+
+
+
 
 Thank you.
 
