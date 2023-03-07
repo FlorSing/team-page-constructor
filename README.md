@@ -11,8 +11,7 @@ Output is then finally rendered to HTML.
 The app will be invoked using node index.js, and npm needs to be installed.
 
 The page view is sampled below:
-
-https://github.com/FlorSing/team-page-constructor/blob/main/starter/index.js
+https://github.com/FlorSing/team-page-constructor/blob/main/starter/output/team.html
 
 
 Code can be found in the GitHub repository:
