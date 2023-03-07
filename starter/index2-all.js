@@ -118,6 +118,8 @@ function buildTeam() {
     if (add === 'Add an Engineer') {
          inquirer.prompt(engineer).then((answers) => {
            const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.githubID);
+
+         
          buildQuestions();
          html.push(engineer);
          })
@@ -126,9 +128,12 @@ function buildTeam() {
     if (add === 'Add an Intern') {
      inquirer.prompt(intern).then((answers) => {
           const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.school);
-         buildQuestions();
-         html.push(intern);
-     })
+          
+          buildQuestions();
+          html.push(intern);
+
+           
+        })
     }
 
     if (add === 'Finish building team'){

@@ -103,7 +103,8 @@ function buildStart() {
       buildQuestions();
     //   console.log(manager);
     
-      
+      html.push(manager);
+
       const managerCard = `
       <div class="card employee-card">
       <div class="card-header">
@@ -122,7 +123,7 @@ function buildStart() {
       // html.push(e);
       // console.log(html);
       // fs.writeFile(__dirname, "output", `${answer.managerName}.json`,JSON.stringify(answers, null, '  ') )
-      fs.writeFile('teamMgrCard.html', managerCard,(err) => err? console.error(err) : console.log(''));
+      fs.writeFile('teamMgrCard.html', managerCard,(err) => err? console.error(err) : console.log());
     //   fs.appendFile('teamMgrCard.html', managerCard,(err) => err? console.error(err) : console.log('team  page created'));
       return managerCard;
      
@@ -140,13 +141,13 @@ function buildTeam() {
     
     if (add === 'Add an Engineer') {
          inquirer.prompt(engineer).then((answers) => {
-           const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.github);
+           const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.githubID);
           // html.push(e);
           // console.log(html);
          buildQuestions();
         //  console.log(engineer);
         
-         
+        html.push(engineer);
         const engineerCard =  `
         <div class="card employee-card">
     <div class="card-header">
@@ -162,7 +163,7 @@ function buildTeam() {
     </div>
 </div>
         `;
-        fs.writeFile('teamEngrCard.html', engineerCard,(err) => err? console.error(err) : console.log(''));
+        fs.writeFile('teamEngrCard.html', engineerCard,(err) => err? console.error(err) : console.log());
         // fs.appendFile('teamEngrCard.html', engineerCard,(err) => err? console.error(err) : console.log(''));
         // return engineerCard;
          })
@@ -176,7 +177,7 @@ function buildTeam() {
          buildQuestions();
         //  console.log(intern);
         
-
+          html.push(intern);
          const internCard =  `
          <div class="card employee-card">
      <div class="card-header">
@@ -192,13 +193,19 @@ function buildTeam() {
      </div>
  </div>
          `;
-         fs.writeFile('teamInternCard.html', internCard,(err) => err? console.error(err) : console.log(''));
+         fs.writeFile('teamInternCard.html', internCard,(err) => err? console.error(err) : console.log());
         //  fs.appendFile('teamInternCard.html', internCard,(err) => err? console.error(err) : console.log(''));
         //  return internCard;
      })
     }
 
     if (add === 'Finish building team'){
+
+        // console.log(html);
+        // const writer = html['Manager'].name();
+        
+        // console.log(manager.getRole());
+        // console.log(manager.getEmail());
         
         const htmlPage = `
         <!DOCTYPE html>
@@ -242,6 +249,7 @@ function buildTeam() {
         // fs.appendFile('team.html', managerCard,(err) => err? console.error(err) : console.log('team  page created'));
         // fs.appendFile('htmlPage.html', engineerCard,(err) => err? console.error(err) : console.log('team  page created'));
         // fs.appendFile('htmlPage.html', internCard,(err) => err? console.error(err) : console.log('team  page created'));
+        
         
 
       };

@@ -23,3 +23,11 @@ class Engineer extends Employee {
 }
 
 module.exports = Engineer;
+
+// const testingList = [];
+// const engr = new Engineer('test', 1, 'test@test', 'testing');
+// // const engr2 = new Engineer('test2', 2, 'test@test2', 'testing2');
+// testingList.push(engr);
+// // testingList.push(engr2);
+// const a = JSON.stringify(testingList);
+// console.log(engr.getEmail());
