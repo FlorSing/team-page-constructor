@@ -20,7 +20,7 @@ https://github.com/FlorSing/team-page-constructor/blob/main/starter/output/team.
 
 
 Sample screenshot:
-![Screenshot of project page](https://user-images.githubusercontent.com/118206899/225057908-47d4f5f3-d63b-47e9-a029-706ac0fd1949.png)
+![Screenshot teampageconstructor](https://user-images.githubusercontent.com/118206899/225058406-e2712428-184d-48f4-9db9-2c8dc401ad55.png)
 
 
 Code can be found in the GitHub repository:
